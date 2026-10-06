@@ -40,9 +40,16 @@ while(choice!=5):
     
     
     elif choice==2:
+        print("============")
         print("View Expense")
+        print("=============")
+        for number,expense in enumerate (Add_Expense,start=1):
+            print(f"{number}. {expense['Amount']} |{expense['Category']} |{expense['Description']} |{expense['Date']}")
+            
+        
     elif choice==3:
         print("Expense Summary")
+        
     elif choice==4:
         print("Delete Expense")
     elif choice==5:
