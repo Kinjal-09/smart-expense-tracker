@@ -53,11 +53,21 @@ while(choice!=5):
         for expense in Add_Expense:
             t=expense['Amount']
             total+=t
-        print(f"Total Expenses: ₹{total}")    
+        
+        average=total/len(Add_Expense)
+        print("No.of expenses:",len(Add_Expense))
+        print("Averege expense:",average)
+        print(f"Total Expenses: ₹{total}")   
+        
+         
         
         
     elif choice==4:
+        print("==============")
         print("Delete Expense")
+        print("===============")
+        
+        
     elif choice==5:
         print("Thank you for choosing Smart Expense Tracker") 
     else:
