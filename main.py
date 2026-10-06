@@ -1,7 +1,5 @@
 from datetime import date
 
-
-    
     
 print("========================")
 print(" SMART EXPENSE TRACKER  ")
@@ -28,10 +26,10 @@ while(choice!=5):
             cate=input("enter category:")
             des=input("enter description:")
             Today_date=str(date.today())
-            Expense={"Amount:":amt,
-                    "Category:":cate,
-                    "Description:":des,
-                    "Date:":Today_date}
+            Expense={"Amount":amt,
+                    "Category":cate,
+                    "Description":des,
+                    "Date":Today_date}
             Add_Expense.append(Expense)
             user_input=input ("Type 'no' to stop adding more expenses and 'yes' to continue:").lower()
         print(Add_Expense)
@@ -48,7 +46,15 @@ while(choice!=5):
             
         
     elif choice==3:
+        print("===============")
         print("Expense Summary")
+        print("================")
+        total=0
+        for expense in Add_Expense:
+            t=expense['Amount']
+            total+=t
+        print(f"Total Expenses: ₹{total}")    
+        
         
     elif choice==4:
         print("Delete Expense")
